@@ -112,6 +112,7 @@ function Home() {
         <button onClick={() => navigate("/Login")} className='button-home'>Acceder a la plataforma</button>
       </section>
 
+      <section id="contacto">
       <footer className="footer">
       <div className="footer-content">
       <div className="footer-section">
@@ -140,6 +141,7 @@ function Home() {
     <p className='footer-text'>© {new Date().getFullYear()} PresTech. Todos los derechos reservados.</p>
   </div>
 </footer>
+</section>
         </>
     )
 }

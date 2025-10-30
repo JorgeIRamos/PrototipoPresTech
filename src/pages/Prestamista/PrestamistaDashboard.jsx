@@ -1,65 +1,89 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import "./PrestamistaDashboard.css";
 
 function PrestamistaDashboard() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    return (
-        <>
-        <section>
-            <h1 className="title-1">Dashboard</h1>
-            <p>Resumen general de tu cartera de prestamo</p>
-            <button onClick={() => navigate("/Prestamista/Prestamos/CrearOferta")}>Nuevo Prestamo</button>
-            <div>
-                <span>total</span>
-                <p>$45,250,000</p>
-                <p>Prestamos activos</p>
+  const stats = [
+    {
+      label: "Total",
+      value: "$45,250,000",
+      description: "Préstamos activos",
+    },
+    {
+      label: "Este mes",
+      value: "$8,450,000",
+      description: "Pagos recibidos",
+    },
+    {
+      label: "Activos",
+      value: "24",
+      description: "Clientes",
+    },
+    {
+      label: "Atención",
+      value: "3",
+      description: "Pagos vencidos",
+    },
+  ];
+
+  const recentLoans = [
+    { name: "Juan Pérez", date: "2025-01-15", amount: "$5,000,000" },
+    { name: "María García", date: "2025-01-10", amount: "$3,500,000" },
+    { name: "Carlos Rodríguez", date: "2025-01-05", amount: "$2,000,000"},
+  ];
+
+  return (
+    <div className="dashboard-container">
+      <div className="dashboard-header">
+        <div>
+          <h1 className="dashboard-title">Dashboard</h1>
+          <p className="dashboard-subtitle">Resumen general de tu cartera de préstamos</p>
+        </div>
+        <button
+          className="dashboard-new-btn"
+          onClick={() => navigate("/Prestamista/Prestamos/CrearOferta")}
+        >
+          + Nuevo Préstamo
+        </button>
+      </div>
+
+      <div className="dashboard-stats-grid">
+        {stats.map((stat, index) => (
+          <div key={index} className="dashboard-stat-card">
+            <div className="dashboard-stat-header">
+              <span className="dashboard-stat-label">{stat.label}</span>
             </div>
-            <div>
-                <span>Este mes</span>
-                <p>$8,450,000</p>
-                <p>Pagos recibidos</p>
+            <div className="dashboard-stat-value">{stat.value}</div>
+            <div className="dashboard-stat-description">{stat.description}</div>
+          </div>
+        ))}
+      </div>
+
+      <div className="dashboard-recent-section">
+        <div className="dashboard-recent-header">
+          <h2 className="dashboard-recent-title">Préstamos Recientes</h2>
+          <a href="/Prestamista/Prestamos" className="dashboard-view-all">
+            Ver todos
+          </a>
+        </div>
+
+        <div className="dashboard-loans-list">
+          {recentLoans.map((loan, index) => (
+            <div key={index} className="dashboard-loan-item">
+              <div className="dashboard-loan-info">
+                <div className="dashboard-loan-name">{loan.name}</div>
+                <div className="dashboard-loan-date">Fecha: {loan.date}</div>
+              </div>
+              <div className="dashboard-loan-right">
+                <div className="dashboard-loan-amount">{loan.amount}</div>
+              </div>
             </div>
-            <div>
-                <span>Activos</span>
-                <p>24</p>
-                <p>Clientes</p>
-            </div>
-            <div>
-                <span>Retrasados</span>
-                <p>3</p>
-                <p>Pagos vencidos</p>
-            </div>
-        </section>
-
-            
-            <section>
-                
-                <h2 className="title-2"> Prestamos recientes </h2>
-                <a>Ver todos</a>
-                <div> 
-                <p> Juan perez </p>
-                <p> Fecha: 2025-01-15</p> 
-                <p> 5.000.000 </p>
-                </div>
-
-                <div> 
-                <p> Maria Garcia </p>
-                <p> Fecha: 2025-01-10</p> 
-                <p> 3.500.000 </p>
-                </div>
-
-                 <div> 
-                <p> Carlos Rodriguez </p>
-                <p> Fecha: 2025-01-05</p> 
-                <p> 2.000.000 </p>
-                </div>
-
-
-            </section>     
-
-
-        </>    
-    )
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default PrestamistaDashboard
+export default PrestamistaDashboard;

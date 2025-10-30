@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* === Contenedor principal === */
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f1729;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === Caja del formulario === */
+.register-page .box {
+  position: relative;
+  width: 420px;
+  min-height: 560px;
+  background: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* === Bordes animados === */
+.register-page .box::before,
+.register-page .box::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 420px;
+  height: 560px;
+  background: linear-gradient(0deg, transparent, transparent, #00eeff, #00eeff);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+
+.register-page .box::after {
+  animation-delay: -3s;
+}
+
+.register-page .border-line {
+  position: absolute;
+  inset: 0;
+}
+
+.register-page .border-line::before,
+.register-page .border-line::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 420px;
+  height: 560px;
+  background: linear-gradient(0deg, transparent, transparent, #1311b4, #1311b4);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+
+.register-page .border-line::after {
+  animation-delay: -3s;
+}
+
+/* === Animación === */
+@keyframes animate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* === Formulario === */
+.register-page form {
+  position: absolute;
+  inset: 4px;
+  background: #222;
+  padding: 40px 40px 30px;
+  border-radius: 10px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.register-page form h2 {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* === Entradas corregidas === */
+.register-page .input-box {
+  position: relative;
+  width: 300px;
+  margin-top: 20px;
+}
+
+.register-page .input-box input {
+  width: 100%;
+  padding: 12px 10px;
+  background: #1f2739; /* fondo oscuro visible */
+  border: 1px solid #3a4b6b;
+  border-radius: 5px;
+  outline: none;
+  color: #fff; /* texto visible */
+  font-size: 16px;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.register-page .input-box input:focus {
+  border-color: #00eeff;
+  background: #26324b; /* más claro al enfocar */
+}
+
+.register-page .input-box span {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  pointer-events: none;
+  color: #8f8f8f;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+/* Efecto del label flotante */
+.register-page .input-box input:valid ~ span,
+.register-page .input-box input:focus ~ span {
+  color: #00eeff;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+
+/* Desactivar línea decorativa anterior */
+.register-page .input-box i {
+  display: none;
+}
+
+/* === Checkbox === */
+.register-page .terms-container {
+  width: 100%;
+  margin-top: 20px;
+  color: #ccc;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.register-page .terms-container input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+/* === Botón === */
+.register-page .btn {
+  width: 60%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 45px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #00eeff, #1311b4);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.register-page .btn:hover {
+  background: linear-gradient(90deg, #1311b4, #00eeff);
+  transform: translateY(-2px);
+}
+
+/* === Enlaces === */
+.register-page .imp-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.register-page .imp-links a {
+  color: #ececec;
+  font-size: 14px;
+  text-decoration: none;
+}

@@ -1,0 +1,96 @@
+.historial-container {
+  padding: 40px 80px;
+  background-color: #fafafa;
+  font-family: "Inter", sans-serif;
+  color: #111;
+}
+
+/* ----- Header ----- */
+.historial-header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.historial-header p {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+/* ----- Lista de pagos ----- */
+.historial-lista {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+.historial-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  padding: 14px 20px;
+  margin-bottom: 12px;
+  transition: background 0.2s ease;
+}
+
+.historial-item:hover {
+  background: #f9f9f9;
+}
+
+.historial-info .fecha {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.historial-info .tipo {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.monto p {
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: right;
+}
+
+.estado {
+  color: #999;
+  font-size: 0.85rem;
+  text-align: right;
+}
+
+/* ----- Resumen de Pagos ----- */
+.resumen-pagos {
+  background: #f7f7f7;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 25px 30px;
+}
+
+.resumen-pagos h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.resumen-grid {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.label {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.valor {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 3px;
+}

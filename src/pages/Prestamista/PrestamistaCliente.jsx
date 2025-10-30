@@ -1,3 +1,5 @@
+import "./PrestamistaCliente.css";
+
 function PrestamistaCliente() {
   const clientes = [
     {
@@ -27,31 +29,42 @@ function PrestamistaCliente() {
   ];
 
   return (
-    <>
-      <h1 className= "title-1">Clientes</h1>
-      <p>Gestiona la información de tus prestatarios</p>
+    <div className="clientes-container">
+      <h1 className="title-1">Clientes</h1>
+      <p className="subtitulo">Gestiona la información de tus prestatarios</p>
 
-      <div>
-        <input type="text" placeholder="Buscar clientes..." />
-        <button>Filtros</button>
+      <div className="busqueda-container">
+        <input
+          type="text"
+          placeholder="Buscar clientes..."
+          className="buscador"
+        />
+        <button className="boton-filtros">Filtros</button>
       </div>
 
-      <div>
+      <div className="lista-clientes">
         {clientes.map((cliente) => (
-          <div key={cliente.id}>
-            <h3>{cliente.nombre}</h3>
-            <p>{cliente.email}</p>
-            <p>{cliente.telefono}</p>
-            <p>{cliente.prestamos} préstamos</p>
-            <p>{cliente.total}</p>
+          <div key={cliente.id} className="tarjeta-cliente">
+            <div className="info-cliente">
+              <h3 className="nombre-cliente">{cliente.nombre}</h3>
+              <p className="dato-cliente">{cliente.email}</p>
+              <p className="dato-cliente">{cliente.telefono}</p>
+              <p className="dato-cliente prestamos">
+                {cliente.prestamos} préstamos
+              </p>
+              <p className="dato-cliente total">{cliente.total}</p>
 
-            <button>Ver Detalles</button>
+              <div className="botones">
+                <button className="boton-detalles">Ver Detalles</button>
+              </div>
+            </div>
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 
 export default PrestamistaCliente;
+
 

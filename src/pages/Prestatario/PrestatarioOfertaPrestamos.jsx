@@ -1,44 +1,56 @@
+import "./PrestatarioOfertaPrestamos.css";
 
 function PrestatarioOfertaPrestamos() {
-    return(
-         
+  return (
+    <div className="ofertas-container">
+      <header className="ofertas-header">
+        <h1 className="title-1">Ofertas de Préstamo</h1>
+        <p>A continuación verás las ofertas disponibles</p>
+      </header>
 
-        <>
-        <h1 className="title-1">Ofertas de Prestamo</h1>
-        <p>A continuacion veras las ofertas disponibles</p>
-        <section>
-            <label>Monto de prestamo</label>
-            <input type="number" placeholder="100,000"></input>
-            <button>Filtrar</button>
-            <div>
-                <h2 className="title-2">Oferta de Pedro Perez</h2>
-                <p>Monto: $100,000 - $500,000</p>
-                <p>Tasa de interes anual: 12%</p>
-                <p>Numero de cuotas: 12</p>
-                <p>Frecuencia de pago: Mensual</p>
-                <button>Solicitar</button>
-            </div>
-            <div>
-                <h2 className="title-2">Oferta de Pablo Torres</h2>
-                <p>Monto: $100,000 - $1,000,000</p>
-                <p>Tasa de interes anual: 10%</p>
-                <p>Numero de cuotas: 10</p>
-                <p>Frecuencia de pago: Quincenal</p>
-                <button>Solicitar</button>
-            </div>
-            <div>
-                <h2 className="title-2">Oferta de Rigoberto Marquez</h2>
-                <p>Monto: $100,000 - $2,000,000</p>
-                <p>Tasa de interes anual: 15%</p>
-                <p>Numero de cuotas: 8</p>
-                <p>Frecuencia de pago: Semanal</p>
-                <button>Solicitar</button>
-            </div>
+      <div className="ofertas-layout">
+        <aside className="filtro-panel">
+          <label htmlFor="monto">Monto del préstamo</label>
+          <input
+            id="monto"
+            type="number"
+            placeholder="100000"
+            className="input-filtro"
+          />
+          <button className="btn-filtrar">Filtrar</button>
+        </aside>
+
+        <section className="ofertas-lista">
+          <div className="oferta-card">
+            <h2>Oferta de Pedro Perez</h2>
+            <p>Monto: <strong>$100,000 - $500,000</strong></p>
+            <p>Tasa de interés anual: <strong>12%</strong></p>
+            <p>Número de cuotas: <strong>12</strong></p>
+            <p>Frecuencia de pago: <strong>Mensual</strong></p>
+            <button className="btn-solicitar">Solicitar</button>
+          </div>
+
+          <div className="oferta-card">
+            <h2>Oferta de Pablo Torres</h2>
+            <p>Monto: <strong>$100,000 - $1,000,000</strong></p>
+            <p>Tasa de interés anual: <strong>10%</strong></p>
+            <p>Número de cuotas: <strong>10</strong></p>
+            <p>Frecuencia de pago: <strong>Quincenal</strong></p>
+            <button className="btn-solicitar">Solicitar</button>
+          </div>
+
+          <div className="oferta-card">
+            <h2>Oferta de Rigoberto Marquez</h2>
+            <p>Monto: <strong>$100,000 - $2,000,000</strong></p>
+            <p>Tasa de interés anual: <strong>15%</strong></p>
+            <p>Número de cuotas: <strong>8</strong></p>
+            <p>Frecuencia de pago: <strong>Semanal</strong></p>
+            <button className="btn-solicitar">Solicitar</button>
+          </div>
         </section>
-        </>
-
-
-    )
+      </div>
+    </div>
+  );
 }
 
 export default PrestatarioOfertaPrestamos;

@@ -1,62 +1,78 @@
+import "./PrestatarioHistorial.css";
 
 function PrestatarioHistorial() {
   const historial = [
     {
       id: 1,
-      fechaPago: "2023-01-15",
-      monto: 5000,
-      tipoDePago: "Efectivo",
+      fecha: "15 Ene 2025",
+      tipo: "Transferencia",
+      monto: "$416,667",
       estado: "Completado",
     },
     {
       id: 2,
-      fechaPago: "2023-02-15",
-      monto: 5000,
-      tipoDePago: "Tarjeta de Crédito",
+      fecha: "15 Dic 2024",
+      tipo: "Efectivo",
+      monto: "$416,667",
+      estado: "Completado",
+    },
+    {
+      id: 3,
+      fecha: "15 Nov 2024",
+      tipo: "Transferencia",
+      monto: "$416,667",
+      estado: "Completado",
+    },
+    {
+      id: 4,
+      fecha: "15 Oct 2024",
+      tipo: "Transferencia",
+      monto: "$416,667",
       estado: "Completado",
     },
   ];
 
   return (
-    <>
-      <div className="historial-header">
-        <h1 className="title-1">Historial de Préstamos</h1>
+    <div className="historial-container">
+      <header className="historial-header">
+        <h1>Historial de Pagos</h1>
         <p>Consulta todos tus pagos realizados</p>
-      </div>
+      </header>
 
-      <div className="historial-lista">
+      <section className="historial-lista">
         {historial.map((pago) => (
           <div key={pago.id} className="historial-item">
             <div className="historial-info">
-              <p><strong>Fecha de Pago:</strong> {pago.fechaPago}</p>
-              <p><strong>Monto:</strong> ${pago.monto}</p>
-              <p><strong>Tipo de Pago:</strong> {pago.tipoDePago}</p>
+              <p className="fecha">{pago.fecha}</p>
+              <p className="tipo">{pago.tipo}</p>
             </div>
-            <span className="estado">{pago.estado}</span>
+            <div className="monto">
+              <p>{pago.monto}</p>
+              <span className="estado">{pago.estado}</span>
+            </div>
           </div>
         ))}
-      </div>
+      </section>
 
-      <div className="resumen-card">
-        <h2 className="title-2">Resumen de Pagos</h2>
+      <section className="resumen-pagos">
+        <h2>Resumen de Pagos</h2>
         <div className="resumen-grid">
           <div>
-            <p className="resumen-label">Total Pagado</p>
-            <p className="resumen-valor">$10,000</p>
+            <p className="label">Total Pagado</p>
+            <p className="valor">$1,666,668</p>
           </div>
           <div>
-            <p className="resumen-label">Número de Pagos</p>
-            <p className="resumen-valor">2</p>
+            <p className="label">Número de Pagos</p>
+            <p className="valor">4</p>
           </div>
           <div>
-            <p className="resumen-label">Saldo Restante</p>
-            <p className="resumen-valor">$40,000</p>
+            <p className="label">Saldo Restante</p>
+            <p className="valor">$3,333,332</p>
           </div>
         </div>
-      </div>
-    </>
+      </section>
+    </div>
   );
 }
 
 export default PrestatarioHistorial;
-

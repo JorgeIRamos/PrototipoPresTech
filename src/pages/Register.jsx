@@ -1,42 +1,80 @@
+import "./Register.css";
 
 function Register() {
-
-    const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     alert("¡Registro enviado correctamente!");
-    }
+  };
 
-    return(
-        <>
-        <header>
-            <h1 className="title-1">Registro</h1>
-        </header>
+  return (
+    <div className="register-page">
+      <div className="box">
+        <span className="border-line"></span>
         <form onSubmit={handleSubmit}>
-                <label htmlFor="fullname">Nombre Completo</label>
-                <input type="text" id="fullname" name="fullname" required /><br/>
-                <label htmlFor="identificacion">Identificacion</label>
-                <input type="text" id="identificacion" name="identificacion" required /><br/>
-                <label htmlFor="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required /><br/>
-                <label htmlFor="telefono">Telefono:</label>
-                <input type="text" id="telefono" name="telefono" required /><br/>
-                <label htmlFor="direccion">Dirección:</label>
-                <input type="text" id="direccion" name="direccion" required /><br/>
-                <label htmlFor="ciudad">Ciudad</label>
-                <input type="text" id="ciudad" name="ciudad" required /><br/>
-                <label htmlFor="password">Contraseña:</label>
-                <input type="password" id="password" name="password" required /><br/>
-                <input type="checkbox" id="terms" required></input>
-                <label htmlFor="terms">Acepto los términos y condiciones de uso de PresTech y autorizo el tratamiento de mis datos personales</label><br/>
-                <button type="submit" >Registrarse</button>
+          <h2>Registro</h2>
 
-        </form>
-        <div>
-            <p>¿Ya tienes cuenta? <a href="/Login">Inicia Sesión aquí</a> </p> 
+          <div className="input-box">
+            <input type="text" id="fullname" name="fullname" required />
+            <span>Nombre Completo</span>
+            <i></i>
+          </div>
+
+          <div className="input-box">
+            <input type="text" id="identificacion" name="identificacion" required />
+            <span>Identificación</span>
+            <i></i>
+          </div>
+
+          <div className="input-box">
+            <input type="email" id="email" name="email" required />
+            <span>Correo Electrónico</span>
+            <i></i>
+          </div>
+
+          <div className="input-box">
+            <input type="text" id="telefono" name="telefono" required />
+            <span>Teléfono</span>
+            <i></i>
+          </div>
+
+          <div className="input-box">
+            <input type="text" id="direccion" name="direccion" required />
+            <span>Dirección</span>
+            <i></i>
+          </div>
+
+          <div className="input-box">
+            <input type="text" id="ciudad" name="ciudad" required />
+            <span>Ciudad</span>
+            <i></i>
+          </div>
+
+          <div className="input-box">
+            <input type="password" id="password" name="password" required />
+            <span>Contraseña</span>
+            <i></i>
+          </div>
+
+          <div className="terms-container">
+            <label htmlFor="terms">
+              <input type="checkbox" id="terms" required />  
+              Acepto los términos y condiciones de uso de PresTech y autorizo el
+              tratamiento de mis datos personales
+            </label>
+          </div>
+
+          <button type="submit" className="btn">
+            Registrarse
+          </button>
+
+          <div className="imp-links">
+            <a href="/Login">¿Ya tienes cuenta? Inicia sesión aquí</a>
             <a href="/">← Volver al inicio</a>
-        </div>  
-    </>
-    )
+          </div>
+        </form>
+      </div>
+    </div>
+  );
 }
 
-export default Register
+export default Register;

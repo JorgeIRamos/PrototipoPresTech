@@ -1,0 +1,137 @@
+.ofertas-container {
+  padding: 40px 80px;
+  background-color: #fafafa;
+  font-family: "Inter", sans-serif;
+  color: #111;
+}
+
+/* ----- HEADER ----- */
+.ofertas-header {
+  margin-bottom: 25px;
+}
+
+.ofertas-header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.ofertas-header p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* ----- LAYOUT ----- */
+.ofertas-layout {
+  display: flex;
+  gap: 30px;
+}
+
+/* ----- PANEL DE FILTRO ----- */
+.filtro-panel {
+  width: 240px;
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.filtro-panel label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.input-filtro {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  background-color: white;
+    color: black;
+}
+
+.btn-filtrar {
+  background: linear-gradient(90deg, black, gray);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.btn-filtrar:hover {
+  opacity: 0.9;
+}
+
+/* ----- OFERTAS ----- */
+.ofertas-lista {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  flex: 1;
+}
+
+.oferta-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.oferta-card h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.oferta-card p {
+  color: #444;
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.oferta-card strong {
+  color: #111;
+}
+
+.btn-solicitar {
+  background: linear-gradient(90deg, #00aaff, #0077ff);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.btn-solicitar:hover {
+  background: linear-gradient(90deg, #0095e6, #006ae0);
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 900px) {
+  .ofertas-layout {
+    flex-direction: column;
+  }
+
+  .ofertas-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .filtro-panel {
+    width: 100%;
+  }
+}

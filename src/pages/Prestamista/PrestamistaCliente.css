@@ -1,0 +1,153 @@
+/* ======= CONTENEDOR PRINCIPAL ======= */
+.clientes-container {
+  min-height: 100vh;
+  padding: 30px;
+  background: linear-gradient(to bottom right, #f8fafc, #f1f5f9);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ======= TITULO Y SUBTITULO ======= */
+.title-1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+    color: #111827;
+}
+
+.subtitulo {
+  color: #64748b;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+/* ======= BUSQUEDA ======= */
+.busqueda-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgb(189, 182, 182);
+  margin-bottom: 25px;
+}
+
+.buscador {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.boton-filtros {
+  border: 1px solid #d1d5db;
+  background-color: black;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.boton-filtros:hover {
+  background-color: gray;
+}
+
+/* ======= LISTA DE CLIENTES ======= */
+.lista-clientes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ======= TARJETA DE CLIENTE ======= */
+.tarjeta-cliente {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* ======= INFORMACIÓN DEL CLIENTE ======= */
+.nombre-cliente {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+    color: #111827;
+}
+
+.dato-cliente {
+  color: #475569;
+  margin: 3px 0;
+}
+
+.prestamos {
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.total {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #111827;
+}
+
+/* ======= BOTONES ======= */
+.botones {
+  margin-top: 10px;
+}
+
+.boton-detalles {
+  background-color: black;
+  border: 1px solid #d1d5db;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.boton-detalles:hover {
+  background-color: gray;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+  .clientes-container {
+    padding: 20px;
+  }
+
+  .tarjeta-cliente {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .busqueda-container {
+    flex-direction: column;
+  }
+
+  .boton-filtros {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-1 {
+    font-size: 1.6rem;
+  }
+
+  .total {
+    font-size: 1rem;
+  }
+
+  .buscador {
+    font-size: 0.9rem;
+  }
+}
+
