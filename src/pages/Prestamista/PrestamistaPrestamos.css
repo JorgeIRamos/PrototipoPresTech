@@ -60,6 +60,7 @@
 .filtro-btn {
   border: 1px solid #ddd;
   background-color: black;
+    color: white;
   padding: 6px 14px;
   border-radius: 6px;
   cursor: pointer;
